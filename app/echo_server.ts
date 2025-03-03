@@ -30,7 +30,7 @@ const serverClient = async (con: TCPConnection): Promise<void> => {
             }
 
             console.log('Data read from socket', data)
-            socketWrite(con, data)
+            await socketWrite(con, data)
             console.log('Wrote data back to socket', data)
         }
     } catch (ex) {
